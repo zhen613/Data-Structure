@@ -24,6 +24,7 @@ int main() {
     return 0;
 }//遞迴
 ```
+<img width="489" height="167" alt="螢幕擷取畫面 2025-07-24 154032" src="https://github.com/user-attachments/assets/78157195-7195-4a20-801b-ecb484694f99" />
 
 ```
 #include iostream
@@ -61,6 +62,8 @@ int main() {
     return 0;
 }//非遞迴
 ```
+<img width="586" height="206" alt="image" src="https://github.com/user-attachments/assets/d836e15a-6856-47a4-a46f-826628a9c9ee" />
+
 # 效能分析
 空間複雜度:隨著 M,N 增加越來越大<br>
 時間複雜度:隨著 M,N 增加越來越大<br>
