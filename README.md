@@ -22,7 +22,45 @@ int main() {
     result = Ackerman(2, 3);
     cout << "Ackerman(2, 3) = " << result << endl;
     return 0;
-}\\遞迴
+}//遞迴
+```
+
+```
+#include iostream
+using namespace std;
+
+int acker(int m, int n) {
+    stack<int> s;
+    s.push(m);
+
+    while (!s.empty()) {
+        m = s.top();
+        s.pop();
+
+        if (m == 0) {
+            n = n + 1;
+        } else if (n == 0) {
+            n = 1;
+            s.push(m - 1);
+        } else {
+            s.push(m - 1);
+            s.push(m);
+            n = n - 1;
+        }
+    }
+
+    return n;
+}
+
+int main() {
+    int m, n;
+    cout << "m = "; cin >> m;
+    cout << "n = "; cin >> n;
+    int result = acker(m, n);
+    cout << "Acker(" << m << ", " << n << ") = " << result << endl;
+    return 0;
+}//非遞迴
 ```
 # 效能分析
-<img width="526" height="61" alt="螢幕擷取畫面 2025-07-24 152916" src="https://github.com/user-attachments/assets/6d159855-79b4-424f-92b2-1fc351570865" />
+空間複雜度:隨著 M,N 增加越來越大
+時間複雜度:隨著 M,N 增加越來越大
